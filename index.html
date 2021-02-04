@@ -4,19 +4,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>dDPP Dashboard SMS</title>
-    
-    <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="/style.css">
-    
-    <!-- import the webpage's javascript file -->
     <script src="/script.js" defer></script>
   </head>  
+  
+  
   <body>
     <h1>dDPP Provider Dashboard SMS</h1>
-    
-
         <section>
         <div id="showArea">
             <p id="prompt">Sent SMS:</p>
@@ -28,30 +23,28 @@
             <input type="submit" id="submitBtn" value="Send"
                 onclick="submitItem()">
         </div>
-    </section>
+        </section>
     
     
-    
+
+    <!-- function to add messages to sent list -->
     <script> 
             
-      //Add sent 
+      //function to add sent messages to history once Send button is clicked
       function submitItem(){
-      var submittedItem = document.getElementById('toSend').value;
+      var submittedItem = document.getElementById('toSend').value; //
       const createElem = document.createElement("p");
       createElem.innerHTML = submittedItem;
       smsList.appendChild(createElem);
       }
       
       const smsList = document.getElementById("sms-list");
-            
+
     </script>
     
     
     
-    
-    //
-    
-    
+    <!-- stylesheet -->
     <style>
        * {
         text-align: center;
