@@ -19,9 +19,9 @@
             </div>
         </div>
         <div id="typeArea">
-            <input type="text" id="toSend" name="toSend" placeholder="Type text message here & click Send">
+            <input type="text" id="toSend" name="toSend" placeholder="Type text message here & click Send"> 
             <input type="submit" id="submitBtn" value="Send"
-                onclick="submitItem()">
+                onclick="submitItem()"> 
         </div>
         </section>
     
@@ -32,10 +32,10 @@
             
       //function to add sent messages to history once Send button is clicked
       function submitItem(){
-      var submittedItem = document.getElementById('toSend').value; //
-      const createElem = document.createElement("p");
-      createElem.innerHTML = submittedItem;
-      smsList.appendChild(createElem);
+      var submittedItem = document.getElementById('toSend').value; //grab text in textbox
+      const createElem = document.createElement("p"); //variable to contain text
+      createElem.innerHTML = submittedItem; //add the typed text into text container 
+      smsList.appendChild(createElem); //add the text "createElem" to the history box "smsList"
       }
       
       const smsList = document.getElementById("sms-list");
