@@ -16,4 +16,5 @@ const createElem = document.createElement("p");
 
 
 createElem.innerHTML = submitItem;
+
 groceryList.appendChild(createElem);
