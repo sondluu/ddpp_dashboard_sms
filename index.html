@@ -14,15 +14,29 @@
     <script src="/script.js" defer></script>
   </head>  
   <body>
-    <h1>Hi there!</h1>
+    <h1>dDPP Provider Dashboard SMS</h1>
     
-    <p>
+<!--     <p>
       I'm your cool new webpage. Made with <a href="https://glitch.com">Glitch</a>!
-    </p>
+    </p> -->
 
     <!-- include the Glitch button to show what the webpage is about and
           to make it easier for folks to view source and remix -->
     <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    
+        <section>
+        <div id='showArea'>
+            <p id='prompt'>Sent SMS History</p>
+            <div id="grocery-list">
+            </div>
+        </div>
+        <div id='typeArea'>
+            <input type="text" id="toBuy" name="toBuy" placeholder="Type your text message here & click Send">
+            <input type="submit" id="submitBtn" value="Send"
+                onclick="submitItem(document.getElementById('toBuy').value)">
+        </div>
+    </section>
+    
     <script src="https://button.glitch.me/button.js" defer></script>
   </body>
 </html>
