@@ -20,11 +20,11 @@
         <section>
         <div id="showArea">
             <p id="prompt">Sent SMS:</p>
-            <div id="grocery-list">
+            <div id="sms-list">
             </div>
         </div>
         <div id="typeArea">
-            <input type="text" id="toBuy" name="toBuy" placeholder="Type your text message here & click Send">
+            <input type="text" id="toSend" name="toSend" placeholder="Type text message here & click Send">
             <input type="submit" id="submitBtn" value="Send"
                 onclick="submitItem()">
         </div>
@@ -36,18 +36,90 @@
             
       //Add sent 
       function submitItem(){
-      var submittedItem = document.getElementById('toBuy').value;
+      var submittedItem = document.getElementById('toSend').value;
       const createElem = document.createElement("p");
       createElem.innerHTML = submittedItem;
-      groceryList.appendChild(createElem);
+      smsList.appendChild(createElem);
       }
       
-      const groceryList = document.getElementById("grocery-list");
+      const smsList = document.getElementById("sms-list");
             
     </script>
     
     
     
+    
+    //
+    
+    
+    <style>
+       * {
+        text-align: center;
+        font-family: sans-serif;
+    }
+
+    body {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+    }
+
+    section {
+        background: white;
+        max-width: 600px;
+        /* padding: 20px; */
+        margin: 0 auto;
+        border: 10px solid #000;
+
+    }
+
+    #prompt {
+        /* color: white; */
+        font-size: 15px;
+    }
+
+    input {
+        margin: 2px;
+        text-align: left;
+        padding: 5px;
+        font-size: 16px;
+    }
+
+    input[type=submit] {
+        padding: 8px;
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+    #showArea {
+        padding: 50px;
+    }
+
+    #typeArea {
+        background-color: black;
+        border-color: 5px solid #000;
+        padding: 30px;
+        display: flex;
+    }
+
+    #sms-list {
+        min-height: 100px;
+    }
+
+    #sms-list>p {
+        border-bottom: 1px solid #ddd;
+        padding: 10px 0 10px 0;
+        margin: 0;
+        font-size: 28px;
+    }
+
+    #toSend {
+        width: 85%;
+        font-size: 14px;
+    }
+    </style>
     
   </body>
 </html>
