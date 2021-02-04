@@ -62,8 +62,8 @@ h1 {
         display: flex;
     }
 
-    #grocery-list {
-        min-height: 200px;
+    #sent-list {
+        min-height: 100px;
     }
 
     #grocery-list>p {
@@ -75,5 +75,5 @@ h1 {
 
     #toSend {
         width: 85%;
-        font-size: 20px;
+        font-size: 16px;
     }
