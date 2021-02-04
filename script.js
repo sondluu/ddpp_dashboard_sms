@@ -5,18 +5,12 @@
 console.log("hi");
 
 
-function submitItem(){
-  var submittedItem = document.getElementById('toBuy').value;
-  createElem.innerHTML = submittedItem;
-  groceryList.appendChild(createElem);
-}
+// function submitItem(){
+//   var submittedItem = document.getElementById('toBuy').value;
+//   const createElem = document.createElement("p");
+//   createElem.innerHTML = submittedItem;
+//   groceryList.appendChild(createElem);
+// }
       
+// const groceryList = document.getElementById("grocery-list");
 
-const groceryList = document.getElementById("grocery-list");
-
-
-const createElem = document.createElement("p");
-
-
-
-// groceryList.appendChild(createElem);

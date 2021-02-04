@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Hello!</title>
+    <title>dDPP Dashboard SMS</title>
     
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="/style.css">
@@ -16,27 +16,38 @@
   <body>
     <h1>dDPP Provider Dashboard SMS</h1>
     
-<!--     <p>
-      I'm your cool new webpage. Made with <a href="https://glitch.com">Glitch</a>!
-    </p> -->
 
-    <!-- include the Glitch button to show what the webpage is about and
-          to make it easier for folks to view source and remix -->
-    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
-    
         <section>
         <div id="showArea">
-            <p id="prompt">Sent SMS History</p>
+            <p id="prompt">Sent SMS:</p>
             <div id="grocery-list">
             </div>
         </div>
         <div id="typeArea">
-            <input type="text" id="toBuy" name="toBuy" placeholder="Type your text message here & click Send">
+            <input type="text" id="toSend" name="toSend" placeholder="Type your text message here & click Send">
             <input type="submit" id="submitBtn" value="Send"
-                onclick="submitItem()">
+                onclick="sendMessage()">
         </div>
     </section>
     
-    <script src="https://button.glitch.me/button.js" defer></script>
+    
+    
+    <script> 
+            
+      //Add sent messages to sent SMS list
+      function sendMessage(){
+      var submittedText = document.getElementById('toSend').value;
+      const createElem = document.createElement("p");
+      createElem.innerHTML = submittedItem;
+      groceryList.appendChild(createElem);
+      }
+      
+      const groceryList = document.getElementById("grocery-list");
+            
+    </script>
+    
+    
+    
+    
   </body>
 </html>
