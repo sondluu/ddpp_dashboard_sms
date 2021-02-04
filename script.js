@@ -11,6 +11,9 @@ console.log("hi");
 const groceryList = document.getElementById("grocery-list");
 
 const submitItem = document.getElementById('toBuy').value = '';
+
 const createElem = document.createElement("p");
+
+
 createElem.innerHTML = submitItem;
 groceryList.appendChild(createElem);
