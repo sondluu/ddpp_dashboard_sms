@@ -4,15 +4,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>dDPP Dashboard SMS</title>
+    
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="/style.css">
+    
     <!-- import the webpage's javascript file -->
     <script src="/script.js" defer></script>
-    
-    
-    
-    
   </head>  
   <body>
     <h1>dDPP Provider Dashboard SMS</h1>
@@ -21,28 +20,25 @@
         <section>
         <div id="showArea">
             <p id="prompt">Sent SMS:</p>
-            <div id="sent-list">
+            <div id="grocery-list">
             </div>
         </div>
-          
         <div id="typeArea">
-            <input type="text" id="toSend" name="toSend" placeholder="Type text message here & click Send">
-            <!--submit button triggers sendMessage function-->
+            <input type="text" id="toBuy" name="toBuy" placeholder="Type your text message here & click Send">
             <input type="submit" id="submitBtn" value="Send"
-                    onclick="sendMessage()"> 
+                onclick="submitItem()">
         </div>
     </section>
     
     
     
-    
     <script> 
-    
-      //Add sent messages to sent SMS list
-      function sendMessage(){
-      var submittedText = document.getElementById('toSend').value; //grab the text inside textbox
-      const createElem = document.createElement("p"); // 
-      createElem.innerHTML = submittedText;
+            
+      //Add sent 
+      function submitItem(){
+      var submittedItem = document.getElementById('toBuy').value;
+      const createElem = document.createElement("p");
+      createElem.innerHTML = submittedItem;
       groceryList.appendChild(createElem);
       }
       
@@ -51,90 +47,7 @@
     </script>
     
     
+    
+    
   </body>
-  
-  
-<style>
-  body {
-  font-family: helvetica, arial, sans-serif;
-  margin: 2em;
-}
-
-h1 {
-  font-style: italic;
-  color: #373fff;
-}
-
-
-* {
-        text-align: center;
-        font-family: sans-serif;
-    }
-
-    body {
-        padding: 0;
-        margin: 0;
-        height: 100%;
-    }
-
-    section {
-        background: white;
-        max-width: 600px;
-        /* padding: 20px; */
-        margin: 0 auto;
-        border: 10px solid #000;
-
-    }
-
-    #prompt {
-        /* color: white; */
-        font-size: 15px;
-    }
-
-    input {
-        margin: 2px;
-        text-align: left;
-        padding: 5px;
-        font-size: 16px;
-    }
-
-    input[type=submit] {
-        padding: 8px;
-    }
-
-    input:focus {
-        outline: none;
-    }
-
-    #showArea {
-        padding: 50px;
-    }
-
-    #typeArea {
-        background-color: black;
-        border-color: 5px solid #000;
-        padding: 30px;
-        display: flex;
-    }
-
-    #sent-list {
-        min-height: 100px;
-    }
-
-    #grocery-list>p {
-        border-bottom: 1px solid #ddd;
-        padding: 10px 0 10px 0;
-        margin: 0;
-        font-size: 28px;
-    }
-
-    #toSend {
-        width: 85%;
-        font-size: 14px;
-    }
-
-  
-  
-  
-  </style>
 </html>
